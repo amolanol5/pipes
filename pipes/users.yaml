@@ -17,7 +17,3 @@ extends:
   template: test.yaml@templates
   parameters:
     test: $(test)
-    deployConfig:
-      - ${{ if eq(variables['Build.Reason'], 'Manual') }}: 
-          - stage: Desarrollo
-            test: 'test'
