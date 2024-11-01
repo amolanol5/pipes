@@ -14,6 +14,6 @@ resources:
       endpoint: amolanol5
 
 extends:
-  template: test.yaml@templates
+  template: test.yaml@azd
   parameters:
     test: $(test)
