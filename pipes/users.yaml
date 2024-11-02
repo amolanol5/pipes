@@ -15,7 +15,7 @@ resources:
 
 parameters:
   - name: environment
-    displayName: [Environment]
+    displayName: Environment
     type: string
     default: None
     values:
