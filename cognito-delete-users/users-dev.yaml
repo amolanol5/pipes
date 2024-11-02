@@ -1,16 +1,16 @@
 pools:
-  - name: user-pool-co
-    id: us-east-asdfasdf
+  - name: user-pool-co-dev
+    id: us-east-asdfasdf-dev
     description: pool pruebas 1
     users_to_delete:
-      - email: test1@gmail.com
-        id: 4123123123123
+      - email: test1@gmail.com-dev
+        id: 4123123123123dev
 
   - name: user-pool-ru
     id: us-east-lkjhluio
     description: pool pruebas 2
     users_to_delete:
       - email: test3@gmail.com
-        id: 9867986789
+        id: 9867986789dev
       - email: test3@gmail.com
-        id: 9867986789
+        id: 9867986789dev
