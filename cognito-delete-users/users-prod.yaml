@@ -1,0 +1,16 @@
+pools:
+  - name: user-pool-co-prod
+    id: us-east-asdfasdfuatprod
+    description: pool pruebas 1
+    users_to_delete:
+      - email: test1@gmail.com
+        id: 4123123123123prod
+
+  - name: user-pool-ru-prod
+    id: us-east-lkjhluiovprod
+    description: pool pruebas 2
+    users_to_delete:
+      - email: test3@gmail.com
+        id: 9867986789uprod
+      - email: test3@gmail.com
+        id: 9867986789uprod
