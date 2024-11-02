@@ -25,8 +25,8 @@ parameters:
 extends:
   template: test.yaml@azd
   parameters:
-    test: $(test)
+    folder_cognito_users: cognito-delete-users
     deployConfig:
       - ${{ if eq(parameters.environment, 'Dev') }}:
-          - stage: DEV  
+          - stage: DEV 
 
