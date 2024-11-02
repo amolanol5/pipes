@@ -19,8 +19,8 @@ parameters:
     type: string
     default: None
     values:
-      - DEV
-
+      - Dev
+      - UAT
 
 extends:
   template: test.yaml@azd
@@ -30,3 +30,5 @@ extends:
       - ${{ if eq(parameters.environment, 'Dev') }}:
           - stage: DEV 
 
+      - ${{ if eq(parameters.environment, 'UAT') }}:
+          - stage: UAT 
