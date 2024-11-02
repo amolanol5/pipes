@@ -24,7 +24,7 @@ parameters:
       - UAT
 
 extends:
-  template: test.yaml@azd
+  template: delete-cognito-users.yaml@azd
   parameters:
     folder_cognito_users: cognito-delete-users
     deployConfig:
