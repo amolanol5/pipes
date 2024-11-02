@@ -17,7 +17,7 @@ parameters:
   - name: environment
     displayName: Environment
     type: string
-    default: None
+    default: Dev
     values:
       - Dev
       - UAT
