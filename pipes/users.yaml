@@ -26,7 +26,7 @@ extends:
   template: test.yaml@azd
   parameters:
     test: $(test)
-  deployConfig:
-    - ${{ if eq(parameters.environment, 'Dev') }}:
-        - stage: DEV  
+    deployConfig:
+      - ${{ if eq(parameters.environment, 'Dev') }}:
+          - stage: DEV  
 
