@@ -13,7 +13,20 @@ resources:
       name: amolanol5/azd
       endpoint: amolanol5
 
+parameters:
+  - name: environment
+    displayName: [Environment]
+    type: string
+    default: None
+    values:
+      - DEV
+
+
 extends:
   template: test.yaml@azd
   parameters:
     test: $(test)
+  deployConfig:
+    - ${{ if eq(parameters.environment, 'Dev') }}:
+        - stage: DEV  
+
