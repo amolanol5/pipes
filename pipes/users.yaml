@@ -35,5 +35,5 @@ extends:
           - stage: UAT 
 
       - ${{ if and(eq(variables['Build.SourceBranchName'], 'master'), ne(variables['Build.Reason'], 'PullRequest'), ne(variables['Build.Reason'], 'Manual')) }}:
-          - stage: PROD           
+          - stage: PROD
 
