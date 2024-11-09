@@ -1,0 +1,36 @@
+trigger:
+  branches:
+    include:
+      - master
+
+pr:
+  - master
+
+resources:
+  repositories:
+    - repository: azd
+      type: github
+      name: amolanol5/azd
+      endpoint: amolanol5
+
+parameters:
+  - name: environment
+    displayName: Environment
+    type: string
+    default: None
+    values:
+      - None
+      - Dev
+      - UAT
+
+extends:
+  template: validation-files.yaml@azd
+  parameters:
+    folder_cognito_users: cognito-delete-users
+    deployConfig:
+      - ${{ if eq(parameters.environment, 'Dev') }}:
+          - stage: DEV 
+
+      - ${{ if eq(parameters.environment, 'UAT') }}:
+          - stage: UAT
+
